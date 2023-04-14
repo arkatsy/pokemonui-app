@@ -5,7 +5,7 @@ export function ThemeSwitch() {
   const [theme, toggleTheme] = useTheme();
 
   return (
-    <button className={styles.btn} onClick={toggleTheme}>
+    <button className={`${styles.btn} ${styles[theme]}`} onClick={toggleTheme}>
       {theme === "dark" ? <DarkThemeIcon /> : <LightThemeIcon />}
     </button>
   );
@@ -16,7 +16,7 @@ const DarkThemeIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      fill="currentColor"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
@@ -35,9 +35,9 @@ const LightThemeIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      fill="currentColor"
       viewBox="0 0 24 24"
-      strokeWidth={1.5}
+      strokeWidth={2.3}
       stroke="currentColor"
       className={styles.icon}
     >

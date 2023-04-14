@@ -6,7 +6,16 @@
   padding: 8px;
 }
 
+/* Theme Icons */
 .icon {
   width: 24px;
   height: 24px;
+}
+
+.dark {
+  color: var(--accent-white);
+}
+
+.light {
+  color: var(--accent-orange);
 }

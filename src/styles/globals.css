@@ -1,30 +1,53 @@
 :root {
-  --background: hsl(206, 9%, 15%);
-  --background-secondary: hsl(215, 7%, 19%);
-  --text: hsl(0, 0%, 100%);
-  --text-secondary: hsl(204, 16%, 90%);
-  --text-tertiary: hsl(204, 16%, 70%);
+  /* Equivalent to the default theme(dark) */
+  --background: #0b1622;
+  --background-secondary: #152232;
+  --text: #9fadbd;
+  --text-secondary: #8596a5;
 
-  --nunito: 'Nunito';
-  --paytone: 'Paytone One';
+  /* Random colors, why not */
+  --accent-sea: #29a6ff;
+  --accent-red: #ff5e5e;
+  --accent-green: #00d9a5;
+  --accent-yellow: #ffcc00;
+  --accent-purple: #a66dff;
+  --accent-blue: #00a6ff;
+  --accent-orange: #ff8c00;
+  --accent-pink: #ff5eaa;
+  --accent-cyan: #00d9d9;
+  --accent-lime: #a6ff00;
+  --accent-brown: #a66d00;
+  --accent-gray: #5c728a;
+  --accent-white: #edf0f4;
+  --accent-violet: #a600ff;
+
+  /* Fonts */
+  --nunito: "Nunito";
+  --paytone: "Paytone One";
+
+  /* Shadows */
+  --shadow-color: 286deg 36% 56%;
+  --shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
+/* Light Theme */
 :root,
 html[data-theme="light"] {
-  --background: hsl(0, 0%, 100%);
-  --background-secondary: hsl(0, 0%, 90%);
-  --text: hsl(0, 0%, 0%);
-  --text-secondary: hsl(206, 9%, 15%)
-  --text-tertiary: hsl(214, 7%, 19%);
+  --background: #edf1f5;
+  --background-secondary: #fafafa;
+  --text: #5c728a;
+  --text-secondary: #9299a1;
 }
 
+/* Dark Theme */
 :root,
 html[data-theme="dark"] {
-  --background: hsl(206, 9%, 15%);
-  --background-secondary: hsl(215, 7%, 19%);
-  --text: hsl(0, 0%, 100%);
-  --text-secondary: hsl(204, 16%, 90%);
-  --text-tertiary: hsl(204, 16%, 70%);
+  --background: #0b1622;
+  --background-secondary: #152232;
+  --text: #9fadbd;
+  --text-secondary: #8596a5;
 }
 
 body {
