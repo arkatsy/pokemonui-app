@@ -1,0 +1,12 @@
+.btn {
+  background-color: var(--background-secondary);
+  color: var(--text);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  padding: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

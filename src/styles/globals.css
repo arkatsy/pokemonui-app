@@ -1,0 +1,39 @@
+:root {
+  --background: hsl(206, 9%, 15%);
+  --background-secondary: hsl(215, 7%, 19%);
+  --text: hsl(0, 0%, 100%);
+  --text-secondary: hsl(204, 16%, 90%);
+  --text-tertiary: hsl(204, 16%, 70%);
+
+  --nunito: 'Nunito';
+  --paytone: 'Paytone One';
+}
+
+:root,
+html[data-theme="light"] {
+  --background: hsl(0, 0%, 100%);
+  --background-secondary: hsl(0, 0%, 90%);
+  --text: hsl(0, 0%, 0%);
+  --text-secondary: hsl(206, 9%, 15%)
+  --text-tertiary: hsl(214, 7%, 19%);
+}
+
+:root,
+html[data-theme="dark"] {
+  --background: hsl(206, 9%, 15%);
+  --background-secondary: hsl(215, 7%, 19%);
+  --text: hsl(0, 0%, 100%);
+  --text-secondary: hsl(204, 16%, 90%);
+  --text-tertiary: hsl(204, 16%, 70%);
+}
+
+body {
+  --primary-font: var(--nunito), sans-serif;
+  --title-font: var(--paytone), sans-serif;
+  --app-min-width: 350px;
+
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--primary-font);
+  min-width: var(--app-min-width);
+}

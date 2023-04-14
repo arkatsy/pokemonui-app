@@ -1,0 +1,28 @@
+.page {
+  min-height: 100vh;
+}
+
+.header {
+  background: var(--background-secondary);
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1em;
+  position: sticky;
+  top: 0;
+  font-family: var(--title-font);
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 630px) {
+  .header {
+    padding-inline: 2em;
+    height: 4.5em;
+    font-size: 1.05rem;
+  }
+}
+
+.header h1 {
+  font-size: 1.5em;
+}
