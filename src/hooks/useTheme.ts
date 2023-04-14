@@ -1,16 +1,27 @@
 import { useState, useEffect } from "react";
-import { useLocalStorage } from "./useLocalStorage";
 
 type Theme = "light" | "dark";
 
+const getThemeFromLocalStorage = (): Theme => {
+  const theme = localStorage.getItem("theme");
+  if (theme === "light" || theme === "dark") {
+    return theme;
+  }
+  return "light";
+};
+
+const setThemeToLocalStorage = (theme: Theme) => {
+  localStorage.setItem("theme", theme);
+};
+
 export function useTheme() {
-  const [storageTheme, setStorageTheme] = useLocalStorage<Theme>("theme");
+  const storageTheme = getThemeFromLocalStorage();
   const [theme, setTheme] = useState<Theme>(storageTheme);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    setStorageTheme(newTheme);
+    setThemeToLocalStorage(newTheme);
   };
 
   useEffect(() => {

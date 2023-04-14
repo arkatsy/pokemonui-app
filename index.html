@@ -10,12 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&family=Paytone+One&display=swap"
       rel="stylesheet"
     />
-
-    <title>Pokemons</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -23,9 +17,17 @@
           window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
         document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
       } else {
         document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
       }
     </script>
+
+    <title>Pokemons</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
