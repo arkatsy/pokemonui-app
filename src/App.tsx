@@ -1,7 +1,10 @@
 import styles from "./styles/home.module.css";
 import { ThemeSwitch } from "./components";
+import { usePreviewPokemons } from "./hooks/usePreviewPokemons";
 
 function App() {
+  const { data, isLoading, isError } = usePreviewPokemons();
+
   return (
     <div className={styles.page}>
       <div className={styles.topbar}>
@@ -12,7 +15,13 @@ function App() {
       </div>
       <div className={styles.mainContainer}>
         <main className={styles.mainContent}>
-          <p>Main App Content</p>
+          {data &&
+            data.map((pokemon) => (
+              <div key={pokemon.id}>
+                <h1>{pokemon.name}</h1>
+                <img src={pokemon.image} alt={`${pokemon.name} image`} />
+              </div>
+            ))}
         </main>
       </div>
     </div>
