@@ -17,9 +17,16 @@ function App() {
         <main className={styles.mainContent}>
           {data &&
             data.map((pokemon) => (
-              <div key={pokemon.id}>
-                <h1>{pokemon.name}</h1>
-                <img src={pokemon.image} alt={`${pokemon.name} image`} />
+              <div className={styles.pokemonCard} key={pokemon.id}>
+                <h1 className={styles.pokemonTitle}>{pokemon.name}</h1>
+                <div>
+                  <img
+                    draggable={false}
+                    className={styles.pokemonImage}
+                    src={pokemon.image}
+                    alt={`${pokemon.name} image`}
+                  />
+                </div>
               </div>
             ))}
         </main>

@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 
 const API_URL = "https://pokeapi.co/api/v2/pokemon";
 
+const DATA_SLICE = 20;
+
 // Gets the pokemon id from the url
 const getPokemonId = (url: string) => {
   const urlParts = url.split("/");
@@ -17,7 +19,7 @@ type PreviewPokemons = {
 // Fetches all the necessary data for the preview pokemons in the home page
 const fetchPreviewPokemons = async () => {
   // `limit` limits the result to n pokemons and `offset` skips the first n pokemons
-  const response = await fetch(`${API_URL}?limit=4&offset=0`);
+  const response = await fetch(`${API_URL}?limit=${DATA_SLICE}&offset=0`);
   const data = await response.json();
 
   // Fetches the data for each pokemon

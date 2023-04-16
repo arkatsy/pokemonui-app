@@ -15,6 +15,7 @@
   box-shadow: var(--shadow);
   -webkit-box-shadow: var(--shadow);
   -moz-box-shadow: var(--shadow);
+  z-index: 1;
 }
 
 .header {
@@ -27,9 +28,6 @@
   align-items: center;
   justify-content: space-between;
   padding-inline: var(--padding-inline-mobile);
-
-  position: sticky;
-  top: 0;
 
   font-family: var(--title-font);
   letter-spacing: 0.05em;
@@ -54,6 +52,52 @@
   background: inherit;
   margin: 0 auto;
   padding-inline: var(--padding-inline-mobile);
+  padding-block: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  place-items: center;
+  gap: 1em;
+}
+
+.pokemonImage {
+  --size: 150px;
+
+  width: var(--size);
+  height: var(--size);
+}
+
+.pokemonTitle {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin-block-end: 0.5em;
+}
+
+.pokemonCard {
+  --general-padding: 65px;
+
+  padding-inline: var(--general-padding);
+  padding-block-start: calc(var(--general-padding) / 4);
+  padding-block-end: calc(var(--general-padding) / 2);
+  background: var(--background-secondary);
+
+  border-radius: 10px;
+
+  box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.pokemonCard:hover {
+  box-shadow: var(--shadow-hover);
+  -webkit-box-shadow: var(--shadow-hover);
+  -moz-box-shadow: var(--shadow-hover);
+
+  transform: translateY(-5px);
+  transform: scale(1.05);
 }
 
 @media (min-width: 630px) {
@@ -68,5 +112,9 @@
 
   .mainContent {
     padding-inline: var(--padding-inline-desktop);
+  }
+
+  .pokemonImage {
+    --size: 210px;
   }
 }
