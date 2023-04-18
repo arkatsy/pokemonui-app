@@ -59,6 +59,13 @@
   gap: 1em;
 }
 
+.pokemonInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: baseline;
+}
+
 .pokemonImage {
   --size: 200px;
 
@@ -67,10 +74,10 @@
 }
 
 .pokemonTitle {
-  font-size: 2rem;
   text-align: center;
   text-transform: capitalize;
-  margin-block-end: 0.5em;
+  font-size: 2rem;
+  padding-block-end: 0.5em;
 }
 
 .pokemonCard {
@@ -117,6 +124,15 @@
   color: var(--text);
   cursor: pointer;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.pokemonType {
+  --type-icon-size: 25px;
+  display: inline-flex;
+  width: var(--type-icon-size);
+  height: var(--type-icon-size);
+  gap: 16px;
+  filter: var(--pokemon-type-image-filter);
 }
 
 @media (min-width: 630px) {

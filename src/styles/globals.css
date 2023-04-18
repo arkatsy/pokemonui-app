@@ -42,6 +42,11 @@
     0.1px 5.2px 7.8px hsl(var(--shadow-color) / 0.09),
     0.1px 9.1px 13.7px hsl(var(--shadow-color) / 0.13),
     0.2px 16px 24px hsl(var(--shadow-color) / 0.17);
+
+  /* Pokemon Type images colors */
+  /* TODO: Would be nice to have different colors based on the type */
+  --pokemon-type-image-filter: invert(60%) sepia(10%) saturate(562%)
+    hue-rotate(167deg) brightness(97%) contrast(86%);
 }
 
 /* Light Theme */
@@ -51,6 +56,9 @@ html[data-theme="light"] {
   --background-secondary: #fafafa;
   --text: #5c728a;
   --text-secondary: #9299a1;
+
+  --pokemon-type-image-filter: invert(60%) sepia(10%) saturate(562%)
+    hue-rotate(167deg) brightness(97%) contrast(86%);
 }
 
 /* Dark Theme */

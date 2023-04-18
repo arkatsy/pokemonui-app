@@ -61,7 +61,19 @@ function App() {
               <Fragment key={idx}>
                 {page.data.map((pokemon) => (
                   <div className={styles.pokemonCard} key={pokemon.id}>
-                    <h1 className={styles.pokemonTitle}>{pokemon.name}</h1>
+                    <div className={styles.pokemonInfo}>
+                      <h1 className={styles.pokemonTitle}>{pokemon.name}</h1>
+                      <div className={styles.pokemonType}>
+                        {pokemon.types.map((type, idx) => (
+                          <img
+                            className={styles.pokemonType}
+                            key={idx}
+                            src={type.image.default}
+                            alt={type.name}
+                          />
+                        ))}
+                      </div>
+                    </div>
                     <img
                       draggable={false}
                       className={styles.pokemonImage}
@@ -75,11 +87,12 @@ function App() {
 
           {hasNextPage && (
             <div ref={ref} className={styles.loading}>
-              {isFetchingNextPage ? "Loading more..." : "Load More"}
+              {isFetchingNextPage ? <p>"Loading more... "</p> : null}
             </div>
           )}
         </main>
       </div>
+
       {scrollToTopBtn && (
         <button
           onClick={scrollToTop}
