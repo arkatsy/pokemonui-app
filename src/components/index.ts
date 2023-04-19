@@ -1,9 +1,9 @@
-import { ThemeSwitch } from "@/components/ThemeSwitch/themeswitch";
-import { HomeSkeletonsGrid } from "@/components/HomeSkeleton/homeSkeletonsGrid";
-import { PokemonCard } from "@/components/PokemonCard/pokemonCard";
-import { ScrollToTopBtn } from "@/components/ScrollToTopBtn/scrollToTopbtn";
-import { Brand } from "@/components/Brand/brand";
-import { Topbar } from "@/components/Topbar/topbar";
+import { ThemeSwitch } from "./ThemeSwitch/themeswitch";
+import { HomeSkeletonsGrid } from "./HomeSkeleton/homeSkeletonsGrid";
+import { PokemonCard } from "./PokemonCard/pokemonCard";
+import { ScrollToTopBtn } from "./ScrollToTopBtn/scrollToTopbtn";
+import { Brand } from "./Brand/brand";
+import { Topbar } from "./Topbar/topbar";
 
 export {
   ThemeSwitch,

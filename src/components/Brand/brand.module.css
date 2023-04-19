@@ -1,0 +1,9 @@
+.brand {
+  font-size: 1.8rem;
+  color: var(--accent-red);
+  user-select: none;
+}
+
+.brand span {
+  color: var(--accent-sea);
+}

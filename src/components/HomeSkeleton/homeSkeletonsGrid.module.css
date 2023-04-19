@@ -1,0 +1,33 @@
+.skeleton {
+  position: relative;
+  background: var(--background-secondary);
+
+  width: 343px;
+  height: 322px;
+
+  border-radius: 10px;
+
+  box-shadow: var(--shadow-elevation-low);
+  -webkit-box-shadow: var(--shadow-elevation-low);
+  -moz-box-shadow: var(--shadow-elevation-low);
+}
+
+.skeleton::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: inherit;
+  content: "";
+  animation: skeleton-loading 0.7s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: var(--skeleton-loading-color-start);
+  }
+  100% {
+    background-color: var(--skeleton-loading-color-final);
+  }
+}

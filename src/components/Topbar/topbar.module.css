@@ -1,0 +1,38 @@
+.topbar {
+  height: 4em;
+  position: sticky;
+  top: 0;
+  background: var(--background-secondary);
+
+  box-shadow: var(--shadow-elevation-low);
+  -webkit-box-shadow: var(--shadow-elevation-low);
+  -moz-box-shadow: var(--shadow-elevation-low);
+
+  z-index: 1;
+}
+
+.header {
+  height: inherit;
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--padding-inline-mobile);
+
+  font-family: var(--title-font);
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 630px) {
+  .topbar {
+    height: 4.5em;
+  }
+
+  .header {
+    padding-inline: var(--padding-inline-desktop);
+    font-size: 1.05rem;
+  }
+}

@@ -1,0 +1,17 @@
+.scrollToTopBtn {
+  position: fixed;
+  z-index: 1;
+  bottom: 65px;
+  right: 50px;
+  background: var(--background-secondary);
+  border-radius: 50%;
+  padding: 0.5em;
+  box-shadow: var(--shadow-elevation-medium);
+  -webkit-box-shadow: var(--shadow-elevation-medium);
+  -moz-box-shadow: var(--shadow-elevation-medium);
+  width: 55px;
+  height: 55px;
+  color: var(--text);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
