@@ -1,4 +1,4 @@
-import { useTheme } from "../../hooks";
+import { useTheme } from "@/hooks";
 import styles from "./themeswitch.module.css";
 
 export function ThemeSwitch() {

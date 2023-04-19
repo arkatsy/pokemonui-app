@@ -1,11 +1,11 @@
-import styles from "./styles/home.module.css";
+import styles from "@/styles/home.module.css";
 import {
   ScrollToTopBtn,
   Topbar,
   PokemonCard,
   HomeSkeletonsGrid,
-} from "./components";
-import { usePreviewPokemons, useScrollToTop } from "./hooks";
+} from "@/components";
+import { usePreviewPokemons, useScrollToTop } from "@/hooks";
 import { useInView } from "react-intersection-observer";
 import { Fragment, useEffect } from "react";
 

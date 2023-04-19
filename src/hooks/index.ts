@@ -1,5 +1,5 @@
-import { useTheme } from "./useTheme";
-import { usePreviewPokemons } from "./usePreviewPokemons";
-import { useScrollToTop } from "./useScrollToTop";
+import { useTheme } from "@/hooks/useTheme";
+import { usePreviewPokemons } from "@/hooks/usePreviewPokemons";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 export { useTheme, usePreviewPokemons, useScrollToTop };
