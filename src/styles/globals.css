@@ -59,6 +59,9 @@ html[data-theme="light"] {
 
   --pokemon-type-image-filter: invert(60%) sepia(10%) saturate(562%)
     hue-rotate(167deg) brightness(97%) contrast(86%);
+
+  --skeleton-loading-color-start: hsl(217, 28%, 91%);
+  --skeleton-loading-color-final: hsl(222, 15%, 87%);
 }
 
 /* Dark Theme */
@@ -81,12 +84,15 @@ html[data-theme="dark"] {
     -0.3px 21.8px 32.7px hsl(var(--shadow-color) / 0.08),
     -0.4px 28px 42px hsl(var(--shadow-color) / 0.09),
     -0.5px 35.9px 53.9px hsl(var(--shadow-color) / 0.1);
+
+  --skeleton-loading-color-start: hsl(210, 51%, 14%);
+  --skeleton-loading-color-final: hsl(206, 47%, 18%);
 }
 
 body {
   --primary-font: var(--nunito), sans-serif;
   --title-font: var(--paytone), sans-serif;
-  --app-min-width: 350px;
+  --app-min-width: 400px;
 
   background-color: var(--background);
   color: var(--text);
